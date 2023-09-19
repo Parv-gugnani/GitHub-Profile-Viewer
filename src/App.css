@@ -1,24 +1,34 @@
 .App {
     text-align: center;
-    margin: 2rem;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+h1 {
+    color: #333;
 }
 
 form {
-    margin-bottom: 2rem;
+    margin: 20px 0;
 }
 
-input {
-    padding: 0.5rem;
-    font-size: 1rem;
+input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 300px;
+    font-size: 16px;
 }
 
 button {
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
+    padding: 10px 20px;
     background-color: #007bff;
     color: #fff;
     border: none;
+    border-radius: 5px;
     cursor: pointer;
+    font-size: 16px;
 }
 
 button:hover {
@@ -26,15 +36,129 @@ button:hover {
 }
 
 .user-info {
-    margin-top: 2rem;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
 }
 
-img {
-    width: 150px;
+.user-info img {
+    max-width: 100px;
     border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.user-info h2 {
+    color: #333;
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.user-info p {
+    color: #666;
+    font-size: 16px;
+}
+
+:root {
+    --primary-color: #264653;
+    --secondary-color: #2a9d8f;
+    --accent-color: #e9c46a;
+    --highlight-color: #f4a261;
+    --error-color: #e76f51;
+}
+
+body {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+/* Heading Styles */
+h1 {
+    color: var(--secondary-color);
+}
+
+h2 {
+    color: var(--accent-color);
+}
+
+
+button {
+    background-color: var(--secondary-color);
+    color: #fff;
+}
+
+button:hover {
+    background-color: var(--highlight-color);
+}
+
+.user-info {
+    background-color: #fff;
+
+    color: var(--primary-color);
+}
+
+input[type="text"] {
+    background-color: var(--primary-color);
+    color: #fff;
 }
 
 a {
-    text-decoration: none;
-    color: #007bff;
+    color: var(--secondary-color);
+}
+
+a:hover {
+    color: var(--accent-color);
+}
+
+.user-repos {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 20px;
+}
+
+
+.user-repos ul {
+    list-style: none;
+    padding: 0;
+}
+
+.user-repos li {
+    margin-bottom: 15px;
+}
+
+
+.repo-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.repo-card {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 10px;
+    width: calc(33.33% - 20px);
+    transition: transform 0.3s ease;
+
+    a {
+        text-decoration: none;
+        color: #333;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+}
+
+.repo-card:hover {
+    transform: scale(1.02);
+    transition: transform 0.3s ease;
 }
